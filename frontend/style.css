@@ -1,0 +1,60 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#ff6a00;
+  --muted:#bfc8d6;
+  --glass: rgba(255,255,255,0.04);
+  --container-pad: 24px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg), #071019);
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1100px;margin:0 auto;padding:var(--container-pad);}
+
+/* header */
+.site-header{background:rgba(0,0,0,0.25);backdrop-filter:blur(6px);}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:18px;}
+.logo{height:42px;}
+.nav a{color:var(--muted);margin-left:18px;text-decoration:none}
+.nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{display:flex;gap:20px;align-items:center;padding:48px 0}
+.hero-left{flex:1}
+.hero-right{flex:1;display:flex;justify-content:center;align-items:center}
+.hero h1{font-size:44px;margin:0 0 12px;color:var(--accent)}
+.lead{color:var(--muted);margin-bottom:18px}
+.btn{padding:10px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.btn.primary{background:var(--accent);color:#082123}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.hero-actions{display:flex;gap:12px;margin-top:12px}
+
+/* scene */
+.scene{position:relative;width:360px;height:220px;pointer-events:auto}
+#car{position:absolute;left:0;bottom:10px;width:300px;transform-origin:center;user-select:none}
+#tool{position:absolute;right:10px;top:10px;width:110px;opacity:0.95}
+
+/* services */
+.services{padding:40px 0}
+.cards{display:flex;gap:12px;flex-wrap:wrap}
+.card{flex:1;min-width:180px;background:var(--glass);padding:20px;border-radius:10px;color:var(--muted)}
+
+/* contact */
+.contact form{display:flex;flex-direction:column;gap:12px;max-width:640px}
+.contact input,.contact textarea{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+
+/* footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;text-align:center;color:var(--muted)}
+
+/* responsiveness */
+@media (max-width:880px){
+  .hero{flex-direction:column;padding:28px 0}
+  #car{width:220px}
+  .nav{display:none}
+}
