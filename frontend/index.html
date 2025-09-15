@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GearWorks Mechanical</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/logo.png" alt="GearWorks" class="logo">
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-left">
+        <h1>GearWorks Mechanical</h1>
+        <p class="lead">Precision repairs — trusted service. Book a slot or request a quote.</p>
+        <div class="hero-actions">
+          <button id="quoteBtn" class="btn primary">Request Quote</button>
+          <button id="exploreBtn" class="btn ghost">Explore Services</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- animated car/tool area -->
+        <div id="scene" class="scene">
+          <img id="car" src="assets/car.png" alt="Car" />
+          <img id="tool" src="assets/tool.svg" alt="Tool" />
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="container services">
+      <h2>Our Services</h2>
+      <div class="cards">
+        <div class="card">Engine Diagnostics</div>
+        <div class="card">Welding & Fabrication</div>
+        <div class="card">Suspension & Brakes</div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Us</h2>
+      <p>Family-run workshop with certified mechanics and 10+ years of experience.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form id="contactForm">
+        <input name="name" type="text" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Describe the issue"></textarea>
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> GearWorks Mechanical</p>
+    </div>
+  </footer>
+
+  <!-- GSAP for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
